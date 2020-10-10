@@ -1,7 +1,7 @@
 ![](get.png)
 
 *Idiomas: [Inglês](README.md), [Língua chinesa](README.zh-cn.md), Português Brasileiro (este arquivo), [Espanhol](README-es.md), [Polaco](README.pl.md).*
-
+****
 [![pub package](https://img.shields.io/pub/v/get.svg?label=get&color=blue)](https://pub.dev/packages/get)
 ![building](https://github.com/jonataslaw/get/workflows/build/badge.svg)
 [![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
@@ -36,7 +36,7 @@
     - [Traduções](#traduções)
       - [Usando traduções](#usando-traduções)
     - [Localidade](#localidade)
-      - [Alterar Local](#alterar-local)
+      - [Alterar local](#alterar-local)
       - [Localidade do sistema operacional](#localidade-do-sistema-operacional)
   - [Mudar tema (changeTheme)](#mudar-tema-changetheme)
   - [Outras APIs avançadas](#outras-apis-avançadas)
@@ -44,17 +44,17 @@
     - [Widgets de Estado Local](#widgets-de-estado-local)
       - [ValueBuilder](#valuebuilder)
       - [ObxValue](#obxvalue)
+    - [Explicação em vídeo sobre Outras Features do GetX](#explicação-em-vídeo-sobre-outras-features-do-getx)
   - [Dicas Úteis](#dicas-úteis)
       - [GetView](#getview)
       - [GetWidget](#getwidget)
       - [GetxService](#getxservice)
-  - [Explicação em vídeo sobre Outras Features do GetX](#explicação-em-vídeo-sobre-outras-features-do-getx)
 - [Breaking Changes da versão 2 para 3](#breaking-changes-da-versão-2-para-3)
   - [Tipagem Rx](#tipagem-rx)
   - [RxController e GetBuilder se uniram](#rxcontroller-e-getbuilder-se-uniram)
   - [Rotas nomeadas](#rotas-nomeadas)
-    - [Porque essa mudança](#porque-essa-mudança)
-- [Por que GetX?](#por-que-getx)
+    - [Porque essa mudança?](#porque-essa-mudança)
+- [Por que GetX™?](#por-que-getx)
 - [Comunidade](#comunidade)
   - [Canais da comunidade](#canais-da-comunidade)
   - [Como contribuir](#como-contribuir)
@@ -66,8 +66,24 @@
 - GetX™ possui 3 princípios básicos, o que significa que esta é a prioridade para todos os recursos da biblioteca
   - **PERFOMANCE**: GetX™ é focado em desempenho e consumo mínimo de recursos. Os benchmarks quase sempre não são importantes no mundo real, mas se você quiser, há um indicador de consumo aqui ([benchmarks](https://github.com/jonataslaw/benchmarks)), onde GetX™ se sai melhor do que outras abordagens de gerenciamento de estado, por exemplo. A diferença não é grande, mas mostra nossa preocupação em não desperdiçar seus recursos.
   - **PRODUTIVIDADE**: GetX™ usa uma sintaxe fácil e agradável. Não importa o que você queira fazer, sempre há uma maneira mais fácil com GetX™. Isso economizará horas de desenvolvimento e extrairá o máximo de desempenho que seu aplicativo pode oferecer.
-  - **ORGANIZAÇÃO**: GetX™ permite o desacoplamento total da View, lógica de apresentação, lógica de negócios, injeção de dependência e navegação. Você não precisa de contexto para navegar entre as rotas, portanto, você não depende da árvore do widget (visualização) para isso. Você não precisa de contexto para acessar seus Controllers / BLoCs por meio de um inheritedWidget, então você desacopla completamente sua lógica de apresentação e lógica de negócios de sua camada de visualização. Você não precisa injetar suas classes Controllers / Models / BLoCs em sua árvore de widgets através de multiproviders, pois GetX™ usa seu próprio recurso de injeção de dependência, desacoplando a DI de sua View completamente. Com GetX™ você sabe onde encontrar cada recurso de sua aplicação, tendo o código limpo por padrão. Isso além de facilitar a manutenção, torna o compartilhamento dos módulos, algo que até então em Flutter era impensável, algo totalmente possível. O BLoC foi um ponto de partida para organizar o código no Flutter, ele separa a lógica de negócios da visualização. GetX™ é uma evolução natural disso, separando não apenas a lógica de negócios, mas a lógica de apresentação. O bônus da injeção de dependências e rotas também são dissociadas e a camada de dados está fora de tudo. Você sabe onde está tudo e tudo isso de uma maneira mais fácil do que construir um hello world. GetX™ é a maneira mais fácil, prática e escalonável de construir aplicativos de alto desempenho com o Flutter SDK, com um grande ecossistema em torno dele que funciona perfeitamente em conjunto, sendo fácil para iniciantes e preciso para especialistas. É seguro, estável, atualizado e oferece uma grande variedade de APIs integradas que não estão presentes no Flutter SDK padrão.
-- GetX™ não é inchado. Possui uma infinidade de recursos que permitem que você comece a programar sem se preocupar com nada, mas cada um desses recursos está em contêineres separados e só são iniciados após o uso. Se você usar apenas o Gerenciamento de estado, apenas o Gerenciamento de estado será compilado. Se você usar apenas rotas, nada do gerenciamento de estado será compilado. Você pode compilar o repositório de benchmark e verá que usando apenas o gerenciamento de estado Get, o aplicativo compilado com Get tornou-se menor do que todos os outros aplicativos que têm apenas o gerenciamento de estado de outros pacotes, porque nada que não seja usado será compilado em seu código e cada solução GetX™ foi projetada para ser extra leve. O mérito aqui também vem do tree shaking do Flutter, que é incrível e consegue eliminar recursos não utilizados como nenhum outro framework faz.
+  - **ORGANIZAÇÃO**: GetX™ permite o desacoplamento total da View, lógica de apresentação, lógica de negócios, injeção de dependência e navegação.
+  Você não precisa de contexto para navegar entre as rotas, portanto, você não depende da árvore do widget (visualização) para isso.
+  Você não precisa de contexto para acessar seus Controllers / BLoCs por meio de um inheritedWidget, então você desacopla completamente sua lógica de apresentação e lógica de negócios de sua camada de visualização.
+  Você não precisa injetar suas classes Controllers / Models / BLoCs em sua árvore de widgets através de multiproviders, pois GetX™ usa seu próprio recurso de injeção de dependência, desacoplando a DI de sua View completamente.
+  Com GetX™ você sabe onde encontrar cada recurso de sua aplicação, tendo o código limpo por padrão.
+  Isso além de facilitar a manutenção, torna o compartilhamento dos módulos, algo que até então em Flutter era impensável, algo totalmente possível.
+  O BLoC foi um ponto de partida para organizar o código no Flutter, ele separa a lógica de negócios da visualização.
+  GetX™ é uma evolução natural disso, separando não apenas a lógica de negócios, mas a lógica de apresentação.
+  O bônus da injeção de dependências e rotas também são dissociadas e a camada de dados está fora de tudo.
+  Você sabe onde está tudo e tudo isso de uma maneira mais fácil do que construir um hello world.
+  GetX™ é a maneira mais fácil, prática e escalável de construir aplicativos de alto desempenho com o Flutter SDK, com um grande ecossistema em torno dele que funciona perfeitamente em conjunto, sendo fácil para iniciantes e preciso para especialistas.
+  É seguro, estável, atualizado e oferece uma grande variedade de APIs integradas que não estão presentes no Flutter SDK padrão.
+- GetX™ não é inchado(no sentido de ter coisas demais).
+  Ele possui uma infinidade de recursos que permitem que você comece a programar sem se preocupar com nada, mas cada um desses recursos está em contêineres separados e só são iniciados após o uso.
+  Se você usar apenas o Gerenciamento de estado, apenas o Gerenciamento de estado será compilado.
+  Se você usar apenas rotas, nada do gerenciamento de estado será compilado.
+  Você pode compilar o repositório de benchmark e verá que usando apenas o gerenciamento de estado Get, o aplicativo compilado com Get tornou-se menor do que todos os outros aplicativos que têm apenas o gerenciamento de estado de outros pacotes, porque nada que não seja usado será compilado em seu código e cada solução GetX™ foi projetada para ser extra leve.
+  O mérito aqui também vem do tree shaking do Flutter, que é incrível e consegue eliminar recursos não utilizados como nenhum outro framework faz.
 - Navegue por rotas sem `context`, abra `Dialog`s, `Snackbar`s ou `BottomSheet`s de qualquer lugar no código, gerencie estados e injete dependências de uma forma simples e prática.
 - GetX™ possui um enorme ecossistema, capaz de rodar com o mesmo código no Android, iOS, Web, Mac, Linux, Windows e em seu servidor. É possível reutilizar totalmente o código feito no front-end em seu back-end com **[Get Server](https://github.com/jonataslaw/get_server)**.
 
