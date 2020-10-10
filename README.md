@@ -62,13 +62,21 @@ _Languages: English (this file), [Chinese](README.zh-cn.md), [Brazilian Portugue
   You do not need context to navigate between routes, so you are not dependent on the widget tree (visualization) for this.
   You don't need context to access your controllers / blocks through an inheritedWidget, so you completely decouple your presentation logic and business logic from your visualization layer.
   You do not need to inject your Controllers/Models/Blocs classes into your widget tree through multiproviders, for this GetX uses its own dependency injection feature, decoupling the DI from its view completely.
-  With GetX you know where to find each feature of your application, having clean code by default. This in addition to facilitating maintenance, makes the sharing of modules, something that until then in Flutter was unthinkable, something totally possible.
+  With GetX you know where to find each feature of your application, having clean code by default.
+  This in addition to facilitating maintenance, makes the sharing of modules, something that until then in Flutter was unthinkable, something totally possible.
   BLoC was a starting point for organizing code in Flutter, it separates business logic from visualization.
-  Getx is a natural evolution of this, not only separating the business logic, but the presentation logic. Bonus injection of dependencies and routes are also decoupled, and the data layer is out of it all.
+  Getx is a natural evolution of this, not only separating the business logic, but the presentation logic.
+  Bonus injection of dependencies and routes are also decoupled, and the data layer is out of it all.
   You know where everything is, and all of this in an easier way than building a hello world.
-    GetX is the easiest, most practical and scalable way to build high-performance applications with the Flutter SDK, with a large ecosystem around it that works perfectly together, being easy for beginners, and accurate for experts. It is secure, stable, up-to-date, and offers a huge range of APIs build-in that are not present on default Flutter SDK.
+  GetX is the easiest, most practical and scalable way to build high-performance applications with the Flutter SDK, with a large ecosystem around it that works perfectly together, being easy for beginners, and accurate for experts.
+  It is secure, stable, up-to-date, and offers a huge range of APIs build-in that are not present on default Flutter SDK.
 
-- GetX is not a bloated. It has a multitude of features that allow you to start programming without worrying about anything, but each of these features are in separate containers, and are only started after use. If you only use State Management, only State Management will be compiled. If you only use routes, nothing from the state management will be compiled. You can compile the benchmark repository, and you will see that using only Get state management, the application compiled with Get has become smaller than all other applications that have only the state management of other packages, because nothing that is not used will be compiled into your code, and each GetX solution was designed to be extra lightweight. The merit here also comes from Flutter's tree shaking which is incredible, and manages to eliminate unused resources like no other framework does.
+- GetX is not bloated.
+  It has a multitude of features that allow you to start programming without worrying about anything, but each of these features are in separate containers, and are only started after use.
+  If you only use State Management, only State Management will be compiled.
+  If you only use routes, nothing from the state management will be compiled.
+  You can compile the benchmark repository, and you will see that using only Get state management, the application compiled with Get has become smaller than all other applications that have only the state management of other packages, because nothing that is not used will be compiled into your code, and each GetX solution was designed to be extra lightweight.
+  The merit here also comes from Flutter's tree shaking which is incredible, and manages to eliminate unused resources like no other framework does.
 
 - Getx has a huge ecosystem, capable of running with the same code on Android, iOS, Web, Mac, Linux, Windows, and on your server.
 **It is possible to fully reuse your code made on the frontend on your backend with [Get Server](https://github.com/jonataslaw/get_server)**.
@@ -104,8 +112,10 @@ The "counter" project created by default on new project on Flutter has over 100 
 void main() => runApp(GetMaterialApp(home: Home()));
 ```
 
-- Note: this does not modify the MaterialApp of the Flutter, GetMaterialApp is not a modified MaterialApp, it is just a pre-configured Widget, which has the default MaterialApp as a child. You can configure this manually, but it is definitely not necessary. GetMaterialApp will create routes, inject them, inject translations, inject everything you need for route navigation. If you use Get only for state management or dependency management, it is not necessary to use GetMaterialApp. GetMaterialApp is necessary for routes, snackbars, internationalization, bottomSheets, dialogs, and high-level apis related to routes and absence of context.
-- Note²: This step in only necessary if you gonna use route management (`Get.to()`, `Get.back()` and so on). If you not gonna use it then it is not necessary to do step 1
+- **Note:** this does not modify the MaterialApp of the Flutter, GetMaterialApp is not a modified MaterialApp, it is just a pre-configured Widget, which has the default MaterialApp as a child.
+You can configure this manually, but it is definitely not necessary.
+- **Note²:** If you use Get only for state management or dependency management, it is not necessary to use GetMaterialApp.
+It is only required for dependency management and route management.
 
 - Step 2:
   Create your business logic class and place all variables, methods and controllers inside it.

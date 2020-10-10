@@ -84,10 +84,10 @@
   Se você usar apenas rotas, nada do gerenciamento de estado será compilado.
   Você pode compilar o repositório de benchmark e verá que usando apenas o gerenciamento de estado Get, o aplicativo compilado com Get tornou-se menor do que todos os outros aplicativos que têm apenas o gerenciamento de estado de outros pacotes, porque nada que não seja usado será compilado em seu código e cada solução GetX™ foi projetada para ser extra leve.
   O mérito aqui também vem do tree shaking do Flutter, que é incrível e consegue eliminar recursos não utilizados como nenhum outro framework faz.
-- Navegue por rotas sem `context`, abra `Dialog`s, `Snackbar`s ou `BottomSheet`s de qualquer lugar no código, gerencie estados e injete dependências de uma forma simples e prática.
-- GetX™ possui um enorme ecossistema, capaz de rodar com o mesmo código no Android, iOS, Web, Mac, Linux, Windows e em seu servidor. É possível reutilizar totalmente o código feito no front-end em seu back-end com **[Get Server](https://github.com/jonataslaw/get_server)**.
+- GetX™ possui um enorme ecossistema, capaz de rodar com o mesmo código no Android, iOS, Web, Mac, Linux, Windows e em seu servidor.
+**É possível reutilizar totalmente o código feito no front-end em seu back-end com [Get Server](https://github.com/jonataslaw/get_server)**.
 
-Além disso, todo o processo de desenvolvimento pode ser totalmente automatizado, tanto no servidor quanto no front-end com **[Get CLI](https://github.com/jonataslaw/get_cli)**.
+**Além disso, todo o processo de desenvolvimento pode ser totalmente automatizado, tanto no servidor quanto no front-end com [Get CLI](https://github.com/jonataslaw/get_cli)**.
 
 Além disso, para aumentar ainda mais sua produtividade, temos a **[extensão para VSCode](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)** e a **[extensão para Android Studio/Intellij](https://plugins.jetbrains.com/plugin/14975-getx-snippets)**
 
@@ -117,12 +117,8 @@ Troque `MaterialApp` para `GetMaterialApp`
 void main() => runApp(GetMaterialApp(home: Home()));
 ```
 
-- **Obs:** Isso não modifica o `MaterialApp` do Flutter, GetMaterialApp não é uma versão modificada do MaterialApp, é só um Widget pré-configurado, que tem como child o MaterialApp padrão. Você pode configurar isso manualmente, mas definitivamente não é necessário. GetMaterialApp vai criar rotas, injetá-las, injetar traduções, injetar tudo que você precisa para navegação por rotas (gerenciamento de rotas). Se você quer somente usar o gerenciador de estado ou somente o gerenciador de dependências, não é necessário usar o GetMaterialApp. Ele somente é necessário para:
-  - Rotas
-  - Snackbars/bottomsheets/dialogs
-  - apis relacionadas a rotas e a ausência de `context`
-  - Internacionalização
-- **Obs²:** Esse passo só é necessário se você for usar o gerenciamento de rotas (`Get.to()`, `Get.back()` e assim por diante), Se você não vai usar isso então não é necessário seguir o passo 1
+- **Obs:** Isso não modifica o `MaterialApp` do Flutter, GetMaterialApp não é uma versão modificada do MaterialApp, é só um Widget pré-configurado, que tem como child o MaterialApp padrão. Você pode configurar isso manualmente, mas definitivamente não é necessário.
+- **Obs²:** GetMaterialApp só é necessário para gerenciamento de rotas e dependências. Se você pretende usar somente o gerenciamento de estado, `GetMaterialApp` não é necessário.
 
 - Passo 2:
 Cria a sua classe de regra de negócio e coloque todas as variáveis, métodos e controllers dentro dela.
