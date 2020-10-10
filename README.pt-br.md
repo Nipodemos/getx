@@ -1,4 +1,4 @@
-![](get.png)
+![](https://raw.githubusercontent.com/jonataslaw/getx-community/master/get.png)
 
 *Idiomas: [Inglês](README.md), [Língua chinesa](README.zh-cn.md), Português Brasileiro (este arquivo), [Espanhol](README-es.md), [Polaco](README.pl.md).*
 ****
@@ -14,7 +14,7 @@
 <a href="https://www.buymeacoffee.com/jonataslaw" target="_blank"><img src="https://i.imgur.com/aV6DDA7.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" > </a>
 
 
-![](getx.png)
+![](https://raw.githubusercontent.com/jonataslaw/getx-community/master/getx.png)
 
 <h2> Pedimos desculpas por qualquer parte não traduzida aqui. O GetX™ é atualizado com muita frequência e as traduções podem não vir ao mesmo tempo. Então, para manter essa documentação pelo menos com tudo que a versão em inglês tem, eu vou deixar todos os textos não-traduzidos aqui (eu considero que é melhor ele estar lá em inglês do que não estar), então se alguém quiser traduzir, seria muito útil 😁</h2>
 
@@ -159,7 +159,7 @@ class Outra extends StatelessWidget {
 
 Resultado:
 
-![](counter-app-gif.gif)
+![](https://raw.githubusercontent.com/jonataslaw/getx-community/master/counter-app-gif.gif)
 
 Esse é um projeto simples mas já deixa claro o quão poderoso o Get é. Enquanto seu projeto cresce, essa diferença se torna bem mais significante.
 
@@ -239,6 +239,12 @@ Para navegar para uma próxima tela:
 
 ```dart
 Get.to(ProximaTela());
+```
+
+Para navegar para uma próxima tela com uma rota nomeada. Veja mais detalhes sobre rotas nomeadas [aqui](./documentation/pt_BR/route_management.md#navegar-com-rotas-nomeadas)
+
+```dart
+Get.toNamed('/detalhes');
 ```
 
 Para fechar snackbars, dialogs, bottomsheets, ou qualquer coisa que você normalmente fecharia com o `Navigator.pop(context)` (como por exemplo fechar a View atual e voltar para a anterior):
@@ -406,9 +412,6 @@ Se você quiser saber mais como trocar o tema, você pode seguir esse tutorial n
 ```dart
 // fornece os arguments da tela atual
 Get.arguments
-
-// fornece os arguments da rota anterior
-Get.previousArguments
 
 // fornece o nome da rota anterior
 Get.previousRoute
@@ -836,14 +839,14 @@ o ciclo de vida de seu aplicativo, use GetxService.
 
 ## Tipagem Rx
 
-| Antes    | Depois     |
-| -------- | ---------- |
-| StringX  | `RxString` |
-| IntX     | `RxInt`    |
-| MapX     | `RxMap`    |
-| ListX    | `RxList`   |
-| NumX     | `RxNum`    |
-| DoubleX  | `RxDouble` |
+| Antes   | Depois     |
+| ------- | ---------- |
+| StringX | `RxString` |
+| IntX    | `RxInt`    |
+| MapX    | `RxMap`    |
+| ListX   | `RxList`   |
+| NumX    | `RxNum`    |
+| DoubleX | `RxDouble` |
 
 ## RxController e GetBuilder se uniram
 
@@ -954,6 +957,9 @@ Qualquer contribuição é bem-vinda!
 - [Firestore User with GetX™ | Todo App](https://www.youtube.com/watch?v=BiV0DcXgk58) - Video by Amateur Coder. (inglês)
 - [Firebase Auth with GetX™ | Todo App](https://www.youtube.com/watch?v=-H-T_BSgfOE) - Video by Amateur Coder. (inglês)
 - [The Flutter GetX™ Ecosystem ~ State Management](https://medium.com/flutter-community/the-flutter-getx-ecosystem-state-management-881c7235511d) - State management by [Aachman Garg](https://github.com/imaachman). (inglês)
+- [The Flutter GetX™ Ecosystem ~ Dependency Injection](https://medium.com/flutter-community/the-flutter-getx-ecosystem-dependency-injection-8e763d0ec6b9) - Dependency Injection by [Aachman Garg](https://github.com/imaachman). (inglês)
 - [GetX™, the all-in-one Flutter package](https://www.youtube.com/watch?v=IYQgtu9TM74) - A brief tutorial covering State Management and Navigation by Thad Carnevalli. (inglês)
 - [Build a To-do List App from scratch using Flutter and GetX™](https://www.youtube.com/watch?v=EcnqFasHf18) - UI + State Management + Storage video by Thad Carnevalli. (inglês)
 - [GetX™ Flutter Firebase Auth Example](https://medium.com/@jeffmcmorris/getx-flutter-firebase-auth-example-b383c1dd1de2) - Article by Jeff McMorris. (inglês)
+- [Flutter State Management with GetX – Complete App](https://www.appwithflutter.com/flutter-state-management-with-getx/) - by App With Flutter. (inglês)
+- [Flutter Routing with Animation using Get Package](https://www.appwithflutter.com/flutter-routing-using-get-package/) - by App With Flutter. (inglês)
