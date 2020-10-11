@@ -6,7 +6,7 @@
 ![building](https://github.com/jonataslaw/get/workflows/build/badge.svg)
 [![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 [![Discord Shield](https://img.shields.io/discord/722900883784073290.svg?logo=discord)](https://discord.com/invite/9Hpt99N)
-[![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx)
+[![GetX™ on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx)
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/joinchat/PhdbJRmsZNpAqSLJL6bH7g)
 <a href="https://github.com/Solido/awesome-flutter">
    <img alt="Awesome Flutter" src="https://img.shields.io/badge/Awesome-Flutter-blue.svg?longCache=true&style=flat-square" />
@@ -60,9 +60,9 @@
   - [Como contribuir](#como-contribuir)
   - [Artigos e vídeos](#artigos-e-vídeos)
 
-# Sobre Get
+# Sobre GetX™
 
-- Get é uma biblioteca poderosa e extraleve para Flutter. Ela combina um gerenciador de estado de alta performance, injeção de dependência inteligente e gerenciamento de rotas de uma forma rápida e prática.
+- GetX™ é uma biblioteca poderosa e extraleve para Flutter. Ela combina um gerenciador de estado de alta performance, injeção de dependência inteligente e gerenciamento de rotas de uma forma rápida e prática.
 - GetX™ possui 3 princípios básicos, o que significa que esta é a prioridade para todos os recursos da biblioteca
   - **PERFOMANCE**: GetX™ é focado em desempenho e consumo mínimo de recursos. Os benchmarks quase sempre não são importantes no mundo real, mas se você quiser, há um indicador de consumo aqui ([benchmarks](https://github.com/jonataslaw/benchmarks)), onde GetX™ se sai melhor do que outras abordagens de gerenciamento de estado, por exemplo. A diferença não é grande, mas mostra nossa preocupação em não desperdiçar seus recursos.
   - **PRODUTIVIDADE**: GetX™ usa uma sintaxe fácil e agradável. Não importa o que você queira fazer, sempre há uma maneira mais fácil com GetX™. Isso economizará horas de desenvolvimento e extrairá o máximo de desempenho que seu aplicativo pode oferecer.
@@ -82,7 +82,7 @@
   Ele possui uma infinidade de recursos que permitem que você comece a programar sem se preocupar com nada, mas cada um desses recursos está em contêineres separados e só são iniciados após o uso.
   Se você usar apenas o Gerenciamento de estado, apenas o Gerenciamento de estado será compilado.
   Se você usar apenas rotas, nada do gerenciamento de estado será compilado.
-  Você pode compilar o repositório de benchmark e verá que usando apenas o gerenciamento de estado Get, o aplicativo compilado com Get tornou-se menor do que todos os outros aplicativos que têm apenas o gerenciamento de estado de outros pacotes, porque nada que não seja usado será compilado em seu código e cada solução GetX™ foi projetada para ser extra leve.
+  Você pode compilar o repositório de benchmark e verá que usando apenas o gerenciamento de estado GetX™, o aplicativo compilado com GetX™ tornou-se menor do que todos os outros aplicativos que têm apenas o gerenciamento de estado de outros pacotes, porque nada que não seja usado será compilado em seu código e cada solução GetX™ foi projetada para ser extra leve.
   O mérito aqui também vem do tree shaking do Flutter, que é incrível e consegue eliminar recursos não utilizados como nenhum outro framework faz.
 - GetX™ possui um enorme ecossistema, capaz de rodar com o mesmo código no Android, iOS, Web, Mac, Linux, Windows e em seu servidor.
 **É possível reutilizar totalmente o código feito no front-end em seu back-end com [Get Server](https://github.com/jonataslaw/get_server)**.
@@ -93,7 +93,7 @@ Além disso, para aumentar ainda mais sua produtividade, temos a **[extensão pa
 
 # Instalando
 
-Adicione Get ao seu arquivo pubspec.yaml
+Adicione GetX™ ao seu arquivo pubspec.yaml
 
 ```yaml
 dependencies:
@@ -108,7 +108,10 @@ import 'package:get/get.dart';
 
 # App Counter usando GetX
 
-O app 'Counter' criado por padrão no flutter com o comando `flutter create` tem mais de 100 linhas(incluindo os comentários). Para demonstrar o poder do Get, irei demonstrar como fazer o mesmo 'Counter' mudando o estado em cada toque trocando entre páginas e compartilhando o estado entre telas. Tudo de forma organizada, separando a lógica de negócio da View, COM SOMENTE 26 LINHAS INCLUINDO COMENTÁRIOS
+O app 'Counter' criado por padrão no flutter com o comando `flutter create` tem mais de 100 linhas(incluindo os comentários).
+
+Para demonstrar o poder do GetX™, será demonstrado como fazer o mesmo 'Counter' mudando o estado em cada toque trocando entre páginas e compartilhando o estado entre telas.
+Tudo de forma organizada, separando a lógica de negócio da View, COM SOMENTE 26 LINHAS INCLUINDO COMENTÁRIOS
 
 - Passo 1:
 Troque `MaterialApp` para `GetMaterialApp`
@@ -132,7 +135,7 @@ class Controller extends GetxController{
 ```
 
 - Passo 3:
-Crie sua View usando StatelessWidget, já que, usando Get, você não precisa mais usar StatefulWidgets.
+Crie sua View usando StatelessWidget, já que, usando GetX™, você não precisa mais usar StatefulWidgets.
 
 ```dart
 class Home extends StatelessWidget {
@@ -149,7 +152,7 @@ class Home extends StatelessWidget {
 }
 
 class Outra extends StatelessWidget {
-  // Você pode pedir o Get para encontrar o controller que foi usado em outra página e redirecionar você pra ele.
+  // Você pode pedir o GetX™ para encontrar o controller que foi usado em outra página e redirecionar você pra ele.
   final Controller c = Get.find();
   @override
   Widget build(context) => Scaffold(body: Center(child: Text("${c.count}")));
@@ -161,24 +164,26 @@ Resultado:
 
 ![](https://raw.githubusercontent.com/jonataslaw/getx-community/master/counter-app-gif.gif)
 
-Esse é um projeto simples mas já deixa claro o quão poderoso o Get é. Enquanto seu projeto cresce, essa diferença se torna bem mais significante.
+Esse é um projeto simples mas já deixa claro o quão poderoso o GetX™ é. Enquanto seu projeto cresce, essa diferença se torna bem mais significante.
 
-Get foi feito para funcionar com times, mas torna o trabalho de um desenvolvedor individual simples.
+GetX™ foi feito para funcionar com times, mas torna o trabalho de um desenvolvedor individual simples.
 
-Melhore seus prazos, entregue tudo a tempo sem perder performance. Get não é para todos, mas se você identificar com o que foi dito acima, Get é para você!
+Melhore seus prazos, entregue tudo a tempo sem perder performance. GetX™ não é para todos, mas se você identificar com o que foi dito acima, GetX™ é para você!
 
 
 # Os três pilares
 
 ## Gerenciamento de estado
 
-Há atualmente vários gerenciadores de estados para o Flutter. Porém, a maioria deles envolve usar `ChangeNotifier` para atualizar os widgets e isso é uma abordagem muito ruim no quesito performance em aplicações de médio ou grande porte. Você pode checar na documentação oficial do Flutter que o [`ChangeNotifier` deveria ser usado com um ou no máximo dois listeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html), fazendo-o praticamente inutilizável em qualquer aplicação média ou grande.
+Há atualmente vários gerenciadores de estados para o Flutter.
 
-Get não é melhor ou pior que nenhum gerenciador de estado, mas você deveria analisar esses pontos tanto quanto os argumentos abaixo para escolher entre usar Get na sua forma pura, ou usando-o em conjunto com outro gerenciador de estado.
+Porém, a maioria deles envolve usar `ChangeNotifier` para atualizar os widgets e isso é uma abordagem muito ruim no quesito performance em aplicações de médio ou grande porte.
 
-Definitivamente, Get não é o inimigo de nenhum gerenciador, porque Get é um microframework, não apenas um gerenciador, e pode ser usado tanto sozinho quanto em conjunto com eles.
+GetX™ não é melhor ou pior que nenhum gerenciador de estado, mas você deveria analisar esses pontos tanto quanto os argumentos abaixo para escolher entre usar GetX™ na sua forma pura, ou usando-o em conjunto com outro gerenciador de estado.
 
-Get tem dois gerenciadores de estado diferentes: o simple state manager (vamos chamá-lo de GetBuilder) e o reactive state manager (que tem o nome do pacote, GetX)
+Definitivamente, GetX™ não é o inimigo de nenhum gerenciador, porque GetX™ é um microframework, não apenas um gerenciador, e pode ser usado tanto sozinho quanto em conjunto com eles.
+
+GetX™ tem dois gerenciadores de estado diferentes: o simple state manager (vamos chamá-lo de GetBuilder) e o reactive state manager (que tem o nome do pacote, GetX)
 
 ### Reactive state manager
 
@@ -189,7 +194,7 @@ Programação reativa pode alienar muitas pessoas porque é dito que é complica
 * Você não precisa criar uma classe para cada estado
 * Você não precisa criar um get para o valor inicial
 
-Programação reativa com o Get é tão fácil quanto usar setState.
+Programação reativa com o GetX™ é tão fácil quanto usar setState.
 
 Vamos imaginar que você tenha uma variável e quer que toda vez que ela alterar, todos os widgets que a usam são automaticamente alterados.
 
@@ -283,29 +288,29 @@ Amateur Coder fez um outro vídeo excelente sobre gerenciamento de rotas! Link: 
 
 ## Gerenciamento de Dependência
 
-- Nota: Se você está usando o gerenciador de estado do Get, você não precisa se preocupar com isso, só leia a documentação, mas dê uma atenção a api `Bindings`, que vai fazer tudo isso automaticamente para você.
+- Nota: Se você está usando o gerenciador de estado do GetX™, você não precisa se preocupar com isso, só leia a documentação, mas dê uma atenção a api `Bindings`, que vai fazer tudo isso automaticamente para você.
 
-Já está usando o Get e quer fazer seu projeto o melhor possível? Get tem um gerenciador de dependência simples e poderoso que permite você pegar a mesma classe que seu Bloc ou Controller com apenas uma linha de código, sem Provider context, sem inheritedWidget:
+Já está usando o GetX™ e quer fazer seu projeto o melhor possível? GetX™ tem um gerenciador de dependência simples e poderoso que permite você pegar a mesma classe que seu Bloc ou Controller com apenas uma linha de código, sem Provider context, sem inheritedWidget:
 
 ```dart
 Controller controller = Get.put(Controller()); // Em vez de Controller controller = Controller();
 ```
 
-Em vez de instanciar sua classe dentro da classe que você está usando, você está instanciando ele dentro da instância do Get, que vai fazer ele ficar disponível por todo o App para que então você possa usar seu controller (ou uma classe Bloc) normalmente
+Em vez de instanciar sua classe dentro da classe que você está usando, você está instanciando ele dentro da instância do GetX™, que vai fazer ele ficar disponível por todo o App para que então você possa usar seu controller (ou uma classe Bloc) normalmente
 
 
-**Dica:** O gerenciamento de dependência Get é desacoplado de outras partes do pacote, então se, por exemplo, seu aplicativo já estiver usando um gerenciador de estado (qualquer um, não importa), você não precisa reescrever tudo, você pode usar esta injeção de dependência sem problemas
+**Dica:** O gerenciamento de dependência GetX™ é desacoplado de outras partes do pacote, então se, por exemplo, seu aplicativo já estiver usando um gerenciador de estado (qualquer um, não importa), você não precisa reescrever tudo, você pode usar esta injeção de dependência sem problemas
 
 ```dart
 controller.fetchApi();
 ```
 
-Agora, imagine que você navegou por inúmeras rotas e precisa de dados que foram deixados para trás em seu controlador. Você precisaria de um gerenciador de estado combinado com o Provider ou Get_it, correto? Não com Get. Você só precisa pedir ao Get para "procurar" pelo seu controlador, você não precisa de nenhuma dependência adicional para isso:
+Agora, imagine que você navegou por inúmeras rotas e precisa de dados que foram deixados para trás em seu controlador. Você precisaria de um gerenciador de estado combinado com o Provider ou Get_it, correto? Não com Get. Você só precisa pedir ao GetX™ para "procurar" pelo seu controlador, você não precisa de nenhuma dependência adicional para isso:
 
 ```dart
 Controller controller = Get.find();
-// Sim, parece Magia, o Get irá descobrir qual é seu controller e irá te entregar.
-// Você pode ter 1 milhão de controllers instanciados, o Get sempre te entregará o controller correto.
+// Sim, parece Magia, o GetX™ irá descobrir qual é seu controller e irá te entregar.
+// Você pode ter 1 milhão de controllers instanciados, o GetX™ sempre te entregará o controller correto.
 // Apenas se lembre de Tipar seu controller, final controller = Get.find(); por exemplo, não irá funcionar.
 ```
 
@@ -403,7 +408,7 @@ Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark())
 
 Quando o modo Dark está ativado, ele vai trocar pro modo light e vice versa.
 
-Se você quiser saber mais como trocar o tema, você pode seguir esse tutorial no Medium que até ensina persistência do tema usando Get (e SharedPreferences):
+Se você quiser saber mais como trocar o tema, você pode seguir esse tutorial no Medium que até ensina persistência do tema usando GetX™ (e SharedPreferences):
 
 - [Dynamic Themes in 3 lines using Get](https://medium.com/swlh/flutter-dynamic-themes-in-3-lines-c3b375f292e3) - Tutorial by [Rod Brown](https://github.com/RodBr).
 
@@ -545,7 +550,7 @@ context.responsiveValue<T>()
 
 ### Configurações Globais opcionais e configurações manuais
 
-GetMaterialApp configura tudo para você, mas se quiser configurar Get manualmente, você pode.
+GetMaterialApp configura tudo para você, mas se quiser configurar GetX™ manualmente, você pode.
 
 ```dart
 MaterialApp(
@@ -916,9 +921,9 @@ GetMaterialApp(
 
 # Por que GetX™?
 
-1- Muitas vezes após uma atualização do Flutter, muitos dos seus packages irão quebrar. As vezes acontecem erros de compilação, muitas vezes aparecem erros que ainda não existem respostas sobre e o desenvolvedor necessita saber de onde o erro veio, rastreá-lo, para só então tentar abrir uma issue no repositório correspondente e ver seu problema resolvido. Get centraliza os principais recursos para o desenvolvimento (Gerência de estado, de dependências e de rotas), permitindo você adicionar um único package em seu pubspec e começar a trabalhar. Após uma atualização do Flutter, a única coisa que você precisa fazer é atualizar a dependencia do Get e começar a trabalhar. Get também resolve problemas de compatibilidade. Quantas vezes uma versão de um package não é compatível com a versão de outro, porque um utiliza uma dependência em uma versão e o outro em outra versão? Essa também não é uma preocupação usando Get, já que tudo está no mesmo package e é totalmente compatível.
+1- Muitas vezes após uma atualização do Flutter, muitos dos seus packages irão quebrar. As vezes acontecem erros de compilação, muitas vezes aparecem erros que ainda não existem respostas sobre e o desenvolvedor necessita saber de onde o erro veio, rastreá-lo, para só então tentar abrir uma issue no repositório correspondente e ver seu problema resolvido. GetX™ centraliza os principais recursos para o desenvolvimento (Gerência de estado, de dependências e de rotas), permitindo você adicionar um único package em seu pubspec e começar a trabalhar. Após uma atualização do Flutter, a única coisa que você precisa fazer é atualizar a dependencia do GetX™ e começar a trabalhar. GetX™ também resolve problemas de compatibilidade. Quantas vezes uma versão de um package não é compatível com a versão de outro, porque um utiliza uma dependência em uma versão e o outro em outra versão? Essa também não é uma preocupação usando GetX™, já que tudo está no mesmo package e é totalmente compatível.
 
-2- Flutter é fácil, Flutter é incrível, mas Flutter ainda tem algum boilerplate que pode ser indesejado para maioria dos desenvolvedores, como o Navigator.of(context).push(context, builder[...]. Get simplifica o desenvolvimento. Em vez de escrever 8 linhas de código para apenas chamar uma rota, você pode simplesmente fazer: Get.to(Home()) e pronto, você irá para a próxima página. Urls dinâmicas da web é algo realmente doloroso de fazer com o Flutter atualmente e isso com o GetX™ é estupidamente simples. Gerenciar estados no Flutter e gerenciar dependências também é algo que gera muita discussão, por haver centenas de padrões na pub. Mas não há nada que seja tão fácil quanto adicionar um ".obs" no final de sua variável, colocar o seu widget dentro de um Obx e pronto, todas atualizações daquela variável serão automaticamente atualizadas na tela.
+2- Flutter é fácil, Flutter é incrível, mas Flutter ainda tem algum boilerplate que pode ser indesejado para maioria dos desenvolvedores, como o Navigator.of(context).push(context, builder[...]. GetX™ simplifica o desenvolvimento. Em vez de escrever 8 linhas de código para apenas chamar uma rota, você pode simplesmente fazer: Get.to(Home()) e pronto, você irá para a próxima página. Urls dinâmicas da web é algo realmente doloroso de fazer com o Flutter atualmente e isso com o GetX™ é estupidamente simples. Gerenciar estados no Flutter e gerenciar dependências também é algo que gera muita discussão, por haver centenas de padrões na pub. Mas não há nada que seja tão fácil quanto adicionar um ".obs" no final de sua variável, colocar o seu widget dentro de um Obx e pronto, todas atualizações daquela variável serão automaticamente atualizadas na tela.
 
 3- Facilidade sem se preocupar com desempenho. O desempenho do Flutter já é incrível, mas imagine que você use um gerenciador de estados e um locator para distribuir suas classes blocs/stores/controllers/ etc. Você deverá chamar manualmente a exclusão daquela dependência quando não precisar dela. Mas já pensou em simplesmente usar seu controlador e quando ele não tivesse mais sendo usado por ninguém, ele simplesmente fosse excluído da memória? É isso que GetX™ faz. Com o SmartManagement, tudo que não está sendo usado é excluído da memória e você não deve se preocupar em nada além de programar. Você terá garantia que está consumindo o mínimo de recursos necessários, sem ao menos ter criado uma lógica para isso.
 
@@ -933,15 +938,15 @@ GetX™ tem uma comunidade altamente ativa e útil. Se você tiver dúvidas, ou 
 
 | **Slack (Inglês)**                                                                                                          | **Discord (Inglês e Português)**                                                                                            | **Telegram (Português)**                                                                                              |
 | :-------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx) | [![Discord Shield](https://img.shields.io/discord/722900883784073290.svg?logo=discord)](https://discord.com/invite/9Hpt99N) | [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/joinchat/PhdbJRmsZNpAqSLJL6bH7g) |
+| [![GetX™ on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx) | [![Discord Shield](https://img.shields.io/discord/722900883784073290.svg?logo=discord)](https://discord.com/invite/9Hpt99N) | [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/joinchat/PhdbJRmsZNpAqSLJL6bH7g) |
 
 ## Como contribuir
 
-_Quer contribuir com o projeto? Teremos o orgulho de destacá-lo como um de nossos colaboradores. Aqui estão alguns pontos onde você pode contribuir e tornar o Get (e Flutter) ainda melhor._
+_Quer contribuir com o projeto? Teremos o orgulho de destacá-lo como um de nossos colaboradores. Aqui estão alguns pontos onde você pode contribuir e tornar o GetX™ (e Flutter) ainda melhor._
 
 - Ajudando a traduzir o readme para outros idiomas.
-- Adicionando documentação ao readme (muitas funções do Get ainda não foram documentadas).
-- Escreva artigos ou faça vídeos ensinando como usar o Get (eles serão inseridos no Readme e futuramente em nosso Wiki).
+- Adicionando documentação ao readme (muitas funções do GetX™ ainda não foram documentadas).
+- Escreva artigos ou faça vídeos ensinando como usar o GetX™ (eles serão inseridos no Readme e futuramente em nosso Wiki).
 - Fazendo PRs para código/testes.
 - Incluindo novas funções.
 
@@ -962,4 +967,4 @@ Qualquer contribuição é bem-vinda!
 - [Build a To-do List App from scratch using Flutter and GetX™](https://www.youtube.com/watch?v=EcnqFasHf18) - UI + State Management + Storage video by Thad Carnevalli. (inglês)
 - [GetX™ Flutter Firebase Auth Example](https://medium.com/@jeffmcmorris/getx-flutter-firebase-auth-example-b383c1dd1de2) - Article by Jeff McMorris. (inglês)
 - [Flutter State Management with GetX – Complete App](https://www.appwithflutter.com/flutter-state-management-with-getx/) - by App With Flutter. (inglês)
-- [Flutter Routing with Animation using Get Package](https://www.appwithflutter.com/flutter-routing-using-get-package/) - by App With Flutter. (inglês)
+- [Flutter Routing with Animation using GetX™ Package](https://www.appwithflutter.com/flutter-routing-using-get-package/) - by App With Flutter. (inglês)

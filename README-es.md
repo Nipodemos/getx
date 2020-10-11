@@ -6,7 +6,7 @@
 ![building](https://github.com/jonataslaw/get/workflows/build/badge.svg)
 [![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 [![Discord Shield](https://img.shields.io/discord/722900883784073290.svg?logo=discord)](https://discord.com/invite/9Hpt99N)
-[![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx)
+[![GetX™ on Slack](https://img.shields.io/badge/slack-join-orange.svg)](https://communityinviter.com/apps/getxworkspace/getx)
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/joinchat/PhdbJRmsZNpAqSLJL6bH7g)
 <a href="https://github.com/Solido/awesome-flutter">
    <img alt="Awesome Flutter" src="https://img.shields.io/badge/Awesome-Flutter-blue.svg?longCache=true&style=flat-square" />
@@ -57,9 +57,9 @@
   **PRODUCTIVITY:** GetX utiliza una sintaxis fácil y agradable.
   **ORGANIZATION:** GetX permite el desacoplamiento total de la vista de la lógica empresarial.
 
-* GetX ahorrará horas de desarrollo y extraerá el máximo rendimiento que su aplicación puede ofrecer, siendo fácil para los principiantes y precisa para los expertos. Navega sin contexto, abre diálogos, snackbars o bottomsheets desde cualquier lugar de tu código, gestiona estados e inyecta dependencias de forma fácil y práctica. Get es seguro, estable, actualizado y ofrece una amplia gama de API que no están presentes en el marco predeterminado.
+* GetX ahorrará horas de desarrollo y extraerá el máximo rendimiento que su aplicación puede ofrecer, siendo fácil para los principiantes y precisa para los expertos. Navega sin contexto, abre diálogos, snackbars o bottomsheets desde cualquier lugar de tu código, gestiona estados e inyecta dependencias de forma fácil y práctica. GetX™ es seguro, estable, actualizado y ofrece una amplia gama de API que no están presentes en el marco predeterminado.
 
-- GetX no es bloated. Tiene una multitud de características que le permiten comenzar a programar sin preocuparse por nada, pero cada una de estas características se encuentran en contenedores separados y solo se inician después de su uso. Si solo usa State Management, solo se compilará State Management. Si solo usa rutas, no se compilará nada de la administración estatal. Puede compilar el repositorio de referencia y verá que al usar solo la administración de estado de Get, la aplicación compilada con Get se ha vuelto más pequeña que todas las demás aplicaciones que solo tienen la administración de estado de otros paquetes, porque nada que no se use se compilará en su código, y cada solución GetX fue diseñada para ser muy liviana. El mérito aquí también proviene del movimiento del árbol de Flutter, que es increíble y logra eliminar los recursos no utilizados como ningún otro marco lo hace.
+- GetX no es bloated. Tiene una multitud de características que le permiten comenzar a programar sin preocuparse por nada, pero cada una de estas características se encuentran en contenedores separados y solo se inician después de su uso. Si solo usa State Management, solo se compilará State Management. Si solo usa rutas, no se compilará nada de la administración estatal. Puede compilar el repositorio de referencia y verá que al usar solo la administración de estado de GetX™, la aplicación compilada con GetX™ se ha vuelto más pequeña que todas las demás aplicaciones que solo tienen la administración de estado de otros paquetes, porque nada que no se use se compilará en su código, y cada solución GetX fue diseñada para ser muy liviana. El mérito aquí también proviene del movimiento del árbol de Flutter, que es increíble y logra eliminar los recursos no utilizados como ningún otro marco lo hace.
 
 **GetX hace que su desarrollo sea productivo, pero ¿quiere hacerlo aún más productivo? [Agregue la extensión a su VSCode](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)**
 
@@ -79,7 +79,7 @@ _¿Quieres contribuir al proyecto? Estaremos orgullosos de destacarte como uno d
 
 # Installing
 
-Add Get to your pubspec.yaml file:
+Add GetX™ to your pubspec.yaml file:
 
 ```yaml
 dependencies:
@@ -105,7 +105,7 @@ El proyecto "contador" creado por defecto en un nuevo proyecto en Flutter tiene 
 void main() => runApp(GetMaterialApp(home: Home()));
 ```
 
-**Nota**: esto no modifica el MaterialApp del Flutter, GetMaterialApp no es una MaterialApp modificado, es solo un Widget preconfigurado, que tiene como child un MaterialApp por defecto. Puede configurar esto manualmente, pero definitivamente no es necesario. GetMaterialApp creará rutas, las inyectará, inyectará traducciones, inyectará todo lo que necesita para la navegación de rutas. Si usa Get solo para la gestión de estado o dependencias, no es necesario usar GetMaterialApp. GetMaterialApp es necesario para rutas, snackbars, internacionalización, bottomSheets, diálogos y APIs de alto nivel relacionadas con rutas y ausencia de contexto.
+**Nota**: esto no modifica el MaterialApp del Flutter, GetMaterialApp no es una MaterialApp modificado, es solo un Widget preconfigurado, que tiene como child un MaterialApp por defecto. Puede configurar esto manualmente, pero definitivamente no es necesario. GetMaterialApp creará rutas, las inyectará, inyectará traducciones, inyectará todo lo que necesita para la navegación de rutas. Si usa GetX™ solo para la gestión de estado o dependencias, no es necesario usar GetMaterialApp. GetMaterialApp es necesario para rutas, snackbars, internacionalización, bottomSheets, diálogos y APIs de alto nivel relacionadas con rutas y ausencia de contexto.
 
 **Note²:** Este paso solo es necesario si vas a usar route management (`Get.to()`, `Get.back()` y así). Si no lo va a usar, no es necesario que realice el paso 1
 
@@ -141,7 +141,7 @@ class Home extends StatelessWidget {
 }
 
 class Other extends StatelessWidget {
-  // Puede pedirle a Get que busque un controlador que está siendo utilizado por otra página y le redirija a él.
+  // Puede pedirle a GetX™ que busque un controlador que está siendo utilizado por otra página y le redirija a él.
   final Controller c = Get.find();
 
   @override
@@ -263,7 +263,7 @@ Imagine que ha navegado a través de numerosas rutas y necesita datos que quedar
 
 ```dart
 Controller controller = Get.find();
-//Sí, parece que es magia, Get encontrará su controlador y se lo entregará. Puede tener 1 millón de controladores instanciados, Get siempre le dará el controlador correcto.
+//Sí, parece que es magia, GetX™ encontrará su controlador y se lo entregará. Puede tener 1 millón de controladores instanciados, GetX™ siempre le dará el controlador correcto.
 ```
 
 Y luego podrá recuperar los datos de su controlador que se obtuvieron allí:
@@ -540,9 +540,9 @@ GetMaterialApp(
 
 # ¿Por qué Getx?
 
-1- Después de una actualización de Flutter, muchos paquetes suelen romperse. A veces se producen errores de compilación, errores de los que aún no hay respuestas y el desarrollador necesita saber el origen del error, poder rastrear, y solo entonces intentar abrir un issue en el repositorio correspondiente, para finalmente ver su problema resuelto. Getx centraliza los principales recursos para el desarrollo (gestión de estado, dependencia y rutas), lo que le permite agregar un único paquete a su pubspec y comenzar a trabajar. Después de una actualización de Flutter, lo único que debe hacer es actualizar la dependencia Get y ponerse a trabajar. Get también resuelve problemas de compatibilidad. ¿Cuántas veces una versión de un paquete no es compatible con la versión de otro, porque una usa una dependencia en una versión y la otra en otra? Tampoco es una preocupación usando Get, ya que todo estará en el mismo paquete y será totalmente compatible.
+1- Después de una actualización de Flutter, muchos paquetes suelen romperse. A veces se producen errores de compilación, errores de los que aún no hay respuestas y el desarrollador necesita saber el origen del error, poder rastrear, y solo entonces intentar abrir un issue en el repositorio correspondiente, para finalmente ver su problema resuelto. Getx centraliza los principales recursos para el desarrollo (gestión de estado, dependencia y rutas), lo que le permite agregar un único paquete a su pubspec y comenzar a trabajar. Después de una actualización de Flutter, lo único que debe hacer es actualizar la dependencia GetX™ y ponerse a trabajar. GetX™ también resuelve problemas de compatibilidad. ¿Cuántas veces una versión de un paquete no es compatible con la versión de otro, porque una usa una dependencia en una versión y la otra en otra? Tampoco es una preocupación usando GetX™, ya que todo estará en el mismo paquete y será totalmente compatible.
 
-2- Flutter es fácil, Flutter es increíble, pero todavía tiene algo repetitivo que puede ser no deseado para la mayoría de los desarrolladores, como `Navigator.of(context).push (context, builder [...]`. Get simplifica el desarrollo. En lugar de escribir 8 líneas de código para simplemente llamar a una ruta, simplemente puede hacerlo: `Get.to(Home())` y listo, irá a la página siguiente. Algo doloroso de hacer con Flutter actualmente, mientras que con GetX es estúpidamente simple. Gestionar estados en Flutter y dependencias también es algo que genera mucho debate, ya que hay cientos de patrones en el pub. Pero no hay nada tan fácil como agregar un ".obs" al final de su variable, y colocar su widget dentro de un Obx, y eso es todo, todas las actualizaciones de esa variable se actualizarán automáticamente en la pantalla.
+2- Flutter es fácil, Flutter es increíble, pero todavía tiene algo repetitivo que puede ser no deseado para la mayoría de los desarrolladores, como `Navigator.of(context).push (context, builder [...]`. GetX™ simplifica el desarrollo. En lugar de escribir 8 líneas de código para simplemente llamar a una ruta, simplemente puede hacerlo: `Get.to(Home())` y listo, irá a la página siguiente. Algo doloroso de hacer con Flutter actualmente, mientras que con GetX es estúpidamente simple. Gestionar estados en Flutter y dependencias también es algo que genera mucho debate, ya que hay cientos de patrones en el pub. Pero no hay nada tan fácil como agregar un ".obs" al final de su variable, y colocar su widget dentro de un Obx, y eso es todo, todas las actualizaciones de esa variable se actualizarán automáticamente en la pantalla.
 
 3- Facilidad sin preocuparse por el rendimiento. El rendimiento de Flutter ya es sorprendente, pero imagine que usa un gestor de estado y un localizador para distribuir sus clases de bloc/stores/controllers/ etc. Tendrá que llamar manualmente a la exclusión de esa dependencia cuando no la necesite. Pero, ¿alguna vez pensó en simplemente usar el controlador, y cuando ya no sea necesario, simplemente se elimine de la memoria? Eso es lo que hace GetX. Con SmartManagement, todo lo que no se está utilizando se elimina de la memoria, y no debería tener que preocuparse por nada más que la programación. Se le garantiza el consumo mínimo de recursos, sin siquiera haber creado una lógica para esto.
 
